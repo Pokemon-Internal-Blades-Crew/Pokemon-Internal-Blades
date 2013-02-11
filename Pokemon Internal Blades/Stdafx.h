@@ -3,5 +3,8 @@
 // but are changed infrequently
 
 #pragma once
-
+#include <string>
+#include <iostream>
+#include <cstdlib> // for rand() and srand()
+#include <ctime> // for time()
 

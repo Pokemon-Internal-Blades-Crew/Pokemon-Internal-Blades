@@ -1,3 +1,4 @@
+#pragma once
 /// <summary>
 /// 					Kyle Amos
 ///				  Project Internal Blades
@@ -8,22 +9,18 @@
 /// </summary>
 
 #include "StdAfx.h"
-#include <string>
-#include "Move.h"
 #include "p_Type.h"
 #include "Nature.h"
-#include <iostream>
-#include <cstdlib> // for rand() and srand()
-#include <ctime> // for time()
+
 
 using namespace std;
 
-public ref class Pokemon
+class Pokemon
 {
 
 private:
-	//string m_name;  Pokemon Name
-	//string m_nickname;  Nickname given to Pokemon. Default should be m_name
+	string m_name; // Pokemon Name
+	string m_nickname;  // Nickname given to Pokemon. Default should be m_name
 	int m_health; // from 0 to 999
 	int m_level; // from 1 to 100
 
@@ -46,6 +43,10 @@ private:
 public:
 	Pokemon(const string &name);
 
+	Pokemon()
+	{
+		m_name = "";
+	};
 	// Getters
 	int GetAttackIV(void){return m_attIV;}
 	int GetSpAttIV(void){return m_spAttIV;}

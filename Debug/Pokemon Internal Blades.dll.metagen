@@ -23,17 +23,3 @@ Class PokemonInternalBlades.InternalBladesWindow: AutoLayout, AnsiClass, Class, 
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class PokemonInternalBlades.Class1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-Class Pokemon: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
-    Void .ctor(std.basic_string<char\,std::char_traits<char>\,std::allocator<char> >*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-  Methods:
-    GetAttackIV(): PrivateScope, Public, HideBySig
-    GetSpAttIV(): PrivateScope, Public, HideBySig
-    GetDefenseIV(): PrivateScope, Public, HideBySig
-    GetSpDefIV(): PrivateScope, Public, HideBySig
-    GetSpeedIV(): PrivateScope, Public, HideBySig
-    GetAttackEV(): PrivateScope, Public, HideBySig
-    GetSpAttEV(): PrivateScope, Public, HideBySig
-    GetDefenseEV(): PrivateScope, Public, HideBySig
-    GetSpDefEV(): PrivateScope, Public, HideBySig
-    GetSpeedEV(): PrivateScope, Public, HideBySig
-    GetRandomNumber(Int32, Int32): PrivateScope, Public, HideBySig

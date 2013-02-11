@@ -1,5 +1,6 @@
 #pragma once
-ref class p_Type
+
+class p_Type
 {
 public:
 	p_Type(void);

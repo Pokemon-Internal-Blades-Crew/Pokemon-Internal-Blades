@@ -1,6 +1,6 @@
 #pragma once
 
-ref class Nature
+class Nature
 {
 public:
 	Nature(void);
