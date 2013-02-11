@@ -59,6 +59,11 @@ Pokemon::Pokemon(const string &name)
 //		. Story Code
 //			. Main Quest
 //				. Main Intro
+//					. See tPoA
+//					. Navi
+//					. 'It's dangerous to go alone
+//					. Get starter
+//					. Personality Quiz during chute
 //				. Main Exposition
 //				. Main Rising Action
 //				. Main Climax
@@ -74,4 +79,14 @@ Pokemon::Pokemon(const string &name)
 //			. Towns
 //			. Routes
 //			. Cities
-//
+//		. Pokedex
+//			. Navi
+//				. Natural Array Villain Identifier
+//			. Tatl Plugin
+//				. Target Aquiring Terrain Lister
+//			. Tael Plugin
+//				. Terrain and Environment Listings
+//			. Midna Plugin
+//				. Magicka Information Database - Nocturnal Advisor
+//			. Advisor Plugin
+//				. Algorithm: Depth and Volume Integration System - Operation R
