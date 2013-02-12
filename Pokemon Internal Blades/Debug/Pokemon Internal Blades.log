@@ -1,4 +1,4 @@
-﻿Build started 2/11/2013 10:15:48 PM.
+﻿Build started 2/12/2013 12:21:52 PM.
      1>Project "C:\Users\Kyle\Documents\GitHub\Pokemon-Internal-Blades\Pokemon Internal Blades\Pokemon Internal Blades.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Touching "Debug\Pokemon Internal Blades.unsuccessfulbuild".
@@ -6,33 +6,40 @@
        Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
        ClCompile:
          All outputs are up-to-date.
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\Pokemon Internal Blades.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt Move.cpp /clr:nostdlib 
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\Pokemon Internal Blades.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt Move.cpp Pokemon.cpp p_Type.cpp /clr:nostdlib 
          Move.cpp
-         All outputs are up-to-date.
-       CoreResGen:
-         No resources are out of date with respect to their source files. Skipping resource generation.
-       ResourceCompile:
-         All outputs are up-to-date.
-       Link:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Kyle\Documents\GitHub\Pokemon-Internal-Blades\Debug\Pokemon Internal Blades.dll" /INCREMENTAL:NO /NOLOGO /ASSEMBLYRESOURCE:"Debug\PokemonInternalBlades.Internal Blades Window.resources" /MANIFEST /ManifestFile:"Debug\Pokemon Internal Blades.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Kyle\Documents\GitHub\Pokemon-Internal-Blades\Debug\Pokemon Internal Blades.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 /DLL Debug\app.res
-         Debug\AssemblyInfo.obj
-         "Debug\Internal Blades Window.obj"
-         Debug\Move.obj
-         Debug\Nature.obj
-         "Debug\Pokemon Internal Blades.obj"
-         Debug\Pokemon.obj
-         Debug\p_Type.obj
-         Debug\Stdafx.obj
-         Debug\Story_Events.obj
-         "Debug\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
-         Pokemon Internal Blades.vcxproj -> C:\Users\Kyle\Documents\GitHub\Pokemon-Internal-Blades\Debug\Pokemon Internal Blades.dll
-       Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Kyle\Documents\GitHub\Pokemon-Internal-Blades\Debug\Pokemon Internal Blades.dll;#2" /manifest "Debug\Pokemon Internal Blades.dll.intermediate.manifest"
-       FinalizeBuildStatus:
-         Deleting file "Debug\Pokemon Internal Blades.unsuccessfulbuild".
-         Touching "Debug\Pokemon Internal Blades.lastbuildstate".
-     1>Done Building Project "C:\Users\Kyle\Documents\GitHub\Pokemon-Internal-Blades\Pokemon Internal Blades\Pokemon Internal Blades.vcxproj" (build target(s)).
+     1>c:\users\kyle\documents\github\pokemon-internal-blades\pokemon internal blades\p_Type.h(7): error C2059: syntax error : 'namespace'
+     1>c:\users\kyle\documents\github\pokemon-internal-blades\pokemon internal blades\p_Type.h(7): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\kyle\documents\github\pokemon-internal-blades\pokemon internal blades\p_Type.h(9): error C2146: syntax error : missing ';' before identifier 'target'
+     1>c:\users\kyle\documents\github\pokemon-internal-blades\pokemon internal blades\p_Type.h(9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\kyle\documents\github\pokemon-internal-blades\pokemon internal blades\p_Type.h(9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\kyle\documents\github\pokemon-internal-blades\pokemon internal blades\p_Type.h(14): error C2061: syntax error : identifier 'Pokemon'
+     1>c:\users\kyle\documents\github\pokemon-internal-blades\pokemon internal blades\Move.h(12): error C2146: syntax error : missing ';' before identifier 'm_target'
+     1>c:\users\kyle\documents\github\pokemon-internal-blades\pokemon internal blades\Move.h(12): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\kyle\documents\github\pokemon-internal-blades\pokemon internal blades\Move.h(12): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\kyle\documents\github\pokemon-internal-blades\pokemon internal blades\Move.h(12): warning C4183: 'm_target': missing return type; assumed to be a member function returning 'int'
+     1>c:\users\kyle\documents\github\pokemon-internal-blades\pokemon internal blades\Move.h(26): error C2061: syntax error : identifier 'Pokemon'
+     1>c:\users\kyle\documents\github\pokemon-internal-blades\pokemon internal blades\Move.h(28): error C2061: syntax error : identifier 'Pokemon'
+         Pokemon.cpp
+     1>c:\users\kyle\documents\github\pokemon-internal-blades\pokemon internal blades\p_Type.h(7): error C2059: syntax error : 'namespace'
+     1>c:\users\kyle\documents\github\pokemon-internal-blades\pokemon internal blades\p_Type.h(7): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\kyle\documents\github\pokemon-internal-blades\pokemon internal blades\p_Type.h(9): error C2146: syntax error : missing ';' before identifier 'target'
+     1>c:\users\kyle\documents\github\pokemon-internal-blades\pokemon internal blades\p_Type.h(9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\kyle\documents\github\pokemon-internal-blades\pokemon internal blades\p_Type.h(9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\kyle\documents\github\pokemon-internal-blades\pokemon internal blades\p_Type.h(14): error C2061: syntax error : identifier 'Pokemon'
+     1>Pokemon.cpp(16): error C2653: 'Pokemon' : is not a class or namespace name
+     1>Pokemon.cpp(17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>Pokemon.cpp(18): warning C4508: 'Pokemon' : function should return a value; 'void' return type assumed
+         p_Type.cpp
+     1>c:\users\kyle\documents\github\pokemon-internal-blades\pokemon internal blades\p_Type.h(7): error C2059: syntax error : 'namespace'
+     1>c:\users\kyle\documents\github\pokemon-internal-blades\pokemon internal blades\p_Type.h(7): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\kyle\documents\github\pokemon-internal-blades\pokemon internal blades\p_Type.h(9): error C2146: syntax error : missing ';' before identifier 'target'
+     1>c:\users\kyle\documents\github\pokemon-internal-blades\pokemon internal blades\p_Type.h(9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\kyle\documents\github\pokemon-internal-blades\pokemon internal blades\p_Type.h(9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\kyle\documents\github\pokemon-internal-blades\pokemon internal blades\p_Type.h(14): error C2061: syntax error : identifier 'Pokemon'
+         Generating Code...
+     1>Done Building Project "C:\Users\Kyle\Documents\GitHub\Pokemon-Internal-Blades\Pokemon Internal Blades\Pokemon Internal Blades.vcxproj" (build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:01.25
+Time Elapsed 00:00:00.44
