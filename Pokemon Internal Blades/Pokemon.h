@@ -11,15 +11,16 @@
 #include "StdAfx.h"
 #include "p_Type.h"
 #include "Nature.h"
-namespace Poke
-{
+
+
+using namespace std;
+
 class Pokemon
 {
-//using namespace std;
 
 private:
-	std::string m_name; // Pokemon Name
-	std::string m_nickname;  // Nickname given to Pokemon. Default should be m_name
+	string m_name; // Pokemon Name
+	string m_nickname;  // Nickname given to Pokemon. Default should be m_name
 	int m_health; // from 0 to 999
 	int m_level; // from 1 to 100
 
@@ -40,7 +41,7 @@ private:
 	//srand(time(0));
 	//rand()
 public:
-	Pokemon(const std::string &name);
+	Pokemon(const string &name);
 
 	Pokemon()
 	{
@@ -76,6 +77,14 @@ public:
 //				. Defense			----
 //				. Special Defense	----
 //				. Speed				----
+
+//			. Moves
+//				. Target
+//				. Typing
+//				. Is Physical/Is Special/Is Stat Move
+//				. Damage Dealing
+//				. Accuracy
+
 //			. Types
 //				. Super effective against
 //				. Weak to
@@ -85,4 +94,3 @@ public:
 //			. Evolves Into
 
 };
-}
