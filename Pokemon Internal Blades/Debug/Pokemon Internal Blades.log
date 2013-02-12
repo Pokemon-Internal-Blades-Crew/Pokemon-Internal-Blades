@@ -1,4 +1,4 @@
-﻿Build started 2/11/2013 5:28:03 PM.
+﻿Build started 2/11/2013 10:15:48 PM.
      1>Project "C:\Users\Kyle\Documents\GitHub\Pokemon-Internal-Blades\Pokemon Internal Blades\Pokemon Internal Blades.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Touching "Debug\Pokemon Internal Blades.unsuccessfulbuild".
@@ -35,4 +35,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.35
+Time Elapsed 00:00:01.25
