@@ -12,12 +12,15 @@
 #include "p_Type.h"
 #include "Nature.h"
 
+#include <string>
+#include <iostream>
+#include <cstdlib> // for rand() and srand()
+#include <ctime> // for time()
 
 using namespace std;
 
 class Pokemon
 {
-
 private:
 	string m_name; // Pokemon Name
 	string m_nickname;  // Nickname given to Pokemon. Default should be m_name
@@ -38,15 +41,17 @@ private:
 	int m_spDefEV; // Special Defense Effort Values (EV) from 0 to 255
 	int m_speedEV; // Speed Effort Values (EV) from 0 to 255
 
-	//srand(time(0));
+	srand(time(0));	
 	//rand()
 public:
 	Pokemon(const string &name);
+
 
 	Pokemon()
 	{
 		m_name = "";
 	};
+
 	// Getters
 	int GetAttackIV(void){return m_attIV;}
 	int GetSpAttIV(void){return m_spAttIV;}
@@ -60,10 +65,12 @@ public:
 	int GetSpDefEV(void){return m_spDefEV;}
 	int GetSpeedEV(void){return m_speedEV;}
 
-	//void SetIVs(void);
-	//void SetEVs(void);
+	// Setters
 
-	unsigned int GetRandomNumber(int nLow, int nHigh)	// nLow should = 1, nHigh = 31. This is for initial Generation of IVs.
+	void SetIVs(void);
+	void SetEVs(void);
+
+	int GetRandomNumber(int nLow, int nHigh)	// nLow should = 1, nHigh = 31. This is for initial Generation of IVs.
 	{
 	    return (rand() % (nHigh - nLow + 1)) + nLow;
 	}

@@ -13,10 +13,26 @@
 #include <string>
 using namespace std;
 
+
 Pokemon::Pokemon(const string &name)
 {
+	m_name = name;
 }
 
+void SetIVs(void)
+{ 
+
+	m_attIV = Pokemon::GetRandomNumber(1, 31);
+	m_spAttIV = Pokemon::GetRandomNumber(1, 31);
+	m_defIV = Pokemon::GetRandomNumber(1, 31);
+	m_spDefIV = Pokemon::GetRandomNumber(1, 31);
+	m_speedIV = Pokemon::GetRandomNumber(1, 31);
+
+}
+void SetEVs(void)
+{
+	return void;
+}
 // Goal: Create a Text Based Pokemon Game with unique attack moves
 //	Heirarchy
 //	. Overall Pokemon Game
