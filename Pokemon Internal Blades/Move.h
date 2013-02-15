@@ -1,6 +1,7 @@
 #pragma once
 #include "Stdafx.h"
 #include "Pokemon.h"
+using namespace pk;
 class Move
 {
 private:
@@ -9,12 +10,13 @@ private:
 	int m_speed; // speed priority is -8 to 8 inclusive with 8 is fastest
 	int m_power; // base power.
 	int m_mp;	// How many times move can be used.
-	Pokemon m_target();
+	Pokemon m_target;
 public:
 	Move(void);
 	Move(std::string name, int acc, int speed, int power, int mp) 
 		: m_name(name), m_accuracy(acc), m_speed(speed), m_power(power), m_mp(mp)
-	{};
+	{
+	};
 
 	// getters
 	std::string GetName(void){return m_name;};

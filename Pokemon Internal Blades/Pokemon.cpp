@@ -12,26 +12,33 @@
 #include "Pokemon.h"
 #include <string>
 using namespace std;
+using namespace pk;
 
 
 Pokemon::Pokemon(const string &name)
 {
 	m_name = name;
+    SetRandom();
+	
 }
 
-void SetIVs(void)
+void Pokemon::SetIVs(void)
 { 
-
-	m_attIV = Pokemon::GetRandomNumber(1, 31);
-	m_spAttIV = Pokemon::GetRandomNumber(1, 31);
-	m_defIV = Pokemon::GetRandomNumber(1, 31);
-	m_spDefIV = Pokemon::GetRandomNumber(1, 31);
-	m_speedIV = Pokemon::GetRandomNumber(1, 31);
-
+	m_attIV = GetRandom(1, 31); // Attack Individual Values (IV) from 1 to 31
+	m_spAttIV = Pokemon::GetRandom(1, 31); // Special Attack IV from 1 to 31
+	m_defIV = Pokemon::GetRandom(1, 31); // Defense IV from 1 to 31
+	m_spDefIV = Pokemon::GetRandom(1, 31); // Special Defense IV from 1 to 31
+	m_speedIV = Pokemon::GetRandom(1, 31); // Speed IV from 1 to 31
 }
-void SetEVs(void)
-{
-	return void;
+void Pokemon::SetEVs(void)
+{	
+	// EV codes
+	m_attEV = Pokemon::GetRandom(0, 255); // Attack Effort Values (EV) from 0 to 255
+	m_spAttEV = Pokemon::GetRandom(0, 255); // Special Attack Effort Values (EV) from 0 to 255
+	m_defEV = Pokemon::GetRandom(0, 255); // Defense Effort Values (EV) from 0 to 255
+	m_spDefEV = Pokemon::GetRandom(0, 255); // Special Defense Effort Values (EV) from 0 to 255
+	m_speedEV = Pokemon::GetRandom(0, 255); // Speed Effort Values (EV) from 0 to 255
+
 }
 // Goal: Create a Text Based Pokemon Game with unique attack moves
 //	Heirarchy
@@ -95,7 +102,7 @@ void SetEVs(void)
 //			. Towns
 //			. Routes
 //			. Cities
-//		. Pokedex
+//		. Pokedex : Don't ask.
 //			. Navi
 //				. Natural Array Villain Identifier
 //			. Tatl Plugin

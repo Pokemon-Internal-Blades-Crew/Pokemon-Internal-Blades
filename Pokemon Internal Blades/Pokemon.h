@@ -14,12 +14,15 @@
 
 #include <string>
 #include <iostream>
-#include <cstdlib> // for rand() and srand()
-#include <ctime> // for time()
+#include <stdlib.h> // for rand() and srand()
+#include <time.h> // for time()
 
 using namespace std;
 
-class Pokemon
+	//srand(time(0));
+namespace pk
+{
+	class Pokemon
 {
 private:
 	string m_name; // Pokemon Name
@@ -41,9 +44,7 @@ private:
 	int m_spDefEV; // Special Defense Effort Values (EV) from 0 to 255
 	int m_speedEV; // Speed Effort Values (EV) from 0 to 255
 
-	srand(time(0));	
-	//rand()
-public:
+public:	
 	Pokemon(const string &name);
 
 
@@ -70,11 +71,11 @@ public:
 	void SetIVs(void);
 	void SetEVs(void);
 
-	int GetRandomNumber(int nLow, int nHigh)	// nLow should = 1, nHigh = 31. This is for initial Generation of IVs.
-	{
-	    return (rand() % (nHigh - nLow + 1)) + nLow;
-	}
+	int GetTime(){return time(0);}
 
+	void SetRandom(){srand(GetTime());}
+		
+	static int GetRandom(int nLow, int nHigh){return rand() % nHigh + nLow;}
 //		. Pokemon Code
 //			. Stats					----
 //				. Health			----
@@ -101,3 +102,4 @@ public:
 //			. Evolves Into
 
 };
+}

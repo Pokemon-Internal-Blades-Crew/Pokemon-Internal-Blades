@@ -1,6 +1,7 @@
 // Pokemon Internal Blades.h
 
 #pragma once
+#include "Pokemon.h"
 
 using namespace System;
 
