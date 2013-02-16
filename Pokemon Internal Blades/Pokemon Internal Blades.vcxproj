@@ -78,9 +78,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Internal Blades Window.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
     <ClInclude Include="Move.h" />
     <ClInclude Include="Nature.h" />
     <ClInclude Include="Pokemon Internal Blades.h" />
@@ -92,7 +89,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
-    <ClCompile Include="Internal Blades Window.cpp" />
     <ClCompile Include="Move.cpp" />
     <ClCompile Include="Nature.cpp" />
     <ClCompile Include="Pokemon Internal Blades.cpp" />
@@ -110,11 +106,6 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Internal Blades Window.resx">
-      <DependentUpon>Internal Blades Window.h</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -76,6 +76,7 @@ public:
 	void SetRandom(){srand(GetTime());}
 		
 	static int GetRandom(int nLow, int nHigh){return rand() % nHigh + nLow;}
+
 //		. Pokemon Code
 //			. Stats					----
 //				. Health			----
