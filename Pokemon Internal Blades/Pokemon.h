@@ -51,6 +51,7 @@ public:
 	Pokemon()
 	{
 		m_name = "";
+		SetRandom();
 	};
 
 	// Getters
@@ -71,7 +72,7 @@ public:
 	void SetIVs(void);
 	void SetEVs(void);
 
-	int GetTime(){return time(0);}
+	int GetTime(){return (int)time(0);}
 
 	void SetRandom(){srand(GetTime());}
 		
