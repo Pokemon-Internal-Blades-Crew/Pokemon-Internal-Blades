@@ -15,14 +15,14 @@ using namespace std;
 using namespace pk;
 
 
-Pokemon::Pokemon(const string &name)
+Pokemon::Pokemon(const string &name)	// Constructor. Creates a Pokemon with this name
 {
 	m_name = name;
     SetRandom();
 	
 }
 
-void Pokemon::SetIVs(void)
+void Pokemon::SetIVs(void)	// Sets the Individual values from 1 to 31
 { 
 	m_attIV = GetRandom(1, 31); // Attack Individual Values (IV) from 1 to 31
 	m_spAttIV = Pokemon::GetRandom(1, 31); // Special Attack IV from 1 to 31
@@ -30,7 +30,7 @@ void Pokemon::SetIVs(void)
 	m_spDefIV = Pokemon::GetRandom(1, 31); // Special Defense IV from 1 to 31
 	m_speedIV = Pokemon::GetRandom(1, 31); // Speed IV from 1 to 31
 }
-void Pokemon::SetEVs(void)
+void Pokemon::SetEVs(void) // Eventually this should set the EV's to 0, but this is for the sake of testing.
 {	
 	// EV codes
 	m_attEV = Pokemon::GetRandom(0, 255); // Attack Effort Values (EV) from 0 to 255

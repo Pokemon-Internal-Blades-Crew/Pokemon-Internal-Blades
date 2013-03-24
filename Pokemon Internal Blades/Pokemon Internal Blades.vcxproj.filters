@@ -39,6 +39,9 @@
     <ClInclude Include="Nature.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Ability.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Pokemon Internal Blades.cpp">
@@ -63,6 +66,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Nature.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Ability.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
