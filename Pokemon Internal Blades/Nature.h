@@ -1,6 +1,7 @@
 #pragma once
 #include "Stdafx.h"
 #include "Pokemon.h"
+#include "Constants.h"
 namespace pk
 {
 	class Nature

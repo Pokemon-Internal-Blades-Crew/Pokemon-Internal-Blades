@@ -1,6 +1,0 @@
-Error when line 30 is not commented. Here's the error. I can't find the problem.
-
-1>c:\users\kyle\documents\github\pokemon-internal-blades\pokemon internal blades\Move.h(30): error C3867: 'Move::m_target': function call missing argument list; use '&Move::m_target' to create a pointer to member
-1>c:\users\kyle\documents\github\pokemon-internal-blades\pokemon internal blades\Move.h(30): error C2664: 'Pokemon::Pokemon(const std::string &)' : cannot convert parameter 1 from 'Pokemon (__thiscall Move::* )(void)' to 'const std::string &'
-1>          Reason: cannot convert from 'Pokemon (__thiscall Move::* )(void)' to 'const std::string'
-1>          No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called

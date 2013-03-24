@@ -33,13 +33,13 @@
     <ClInclude Include="Move.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="p_Type.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Nature.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Ability.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Constants.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -60,9 +60,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Move.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="p_Type.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Nature.cpp">

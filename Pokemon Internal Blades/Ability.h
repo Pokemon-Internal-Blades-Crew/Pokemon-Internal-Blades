@@ -1,5 +1,6 @@
 #pragma once
 #include "Stdafx.h"
+#include "Constants.h"
 using namespace std;
 namespace pk
 {
@@ -17,7 +18,7 @@ namespace pk
 		Ability(string name, string desc, string effect) 
 			: m_name(name), m_description(desc), m_effect(effect)
 		{
-			m_isHidden = false;
+			m_isHidden = NO;
 		};
 
 		Ability(string name, string desc, string effect, bool hidden) 

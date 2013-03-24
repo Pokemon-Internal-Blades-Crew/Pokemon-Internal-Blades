@@ -1,3 +1,4 @@
+
 /*
 						Kyle Amos
 				  Project Internal Blades
@@ -11,15 +12,19 @@
 #include "StdAfx.h"
 #include "Pokemon.h"
 #include <string>
+
 using namespace std;
 using namespace pk;
 
 
-Pokemon::Pokemon(const string &name)	// Constructor. Creates a Pokemon with this name
+Pokemon::Pokemon(const string &name, int type1, int type2)	// Constructor. Creates a Pokemon with this name
 {
 	m_name = name;
     SetRandom();
-	
+	m_isFainted = NO;
+	m_owned = NO;
+	m_type1 = type1;
+	m_type2 = type2;
 }
 
 void Pokemon::SetIVs(void)	// Sets the Individual values from 1 to 31
