@@ -49,7 +49,7 @@ namespace pk
 
 
 
-		int GetTyping();					// Used for STAB bonus
+		int GetTyping();					// Used for STAB
 		Pokemon GetTarget(Pokemon target);	// Used to get target
 
 

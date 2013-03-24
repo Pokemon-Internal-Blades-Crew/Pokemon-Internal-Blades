@@ -121,11 +121,12 @@ namespace pk
 //				. Speed				----
 
 //			. Moves
-//				. Target
-//				. Typing
+//				. Target	-----
+//				. Typing	-----
 //				. Is Physical/Is Special/Is Stat Move
 //				. Damage Dealing
-//				. Accuracy
+//				. Accuracy	-----
+//				. STAB
 
 //			. Types			-Partially Done-
 //				. Super effective against
