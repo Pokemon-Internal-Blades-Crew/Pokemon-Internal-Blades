@@ -39,6 +39,11 @@
 *.sdf
 *.opensdf
 *.unsuccessfulbuild
+*.tlog
+*.obj
+*.lastbuildstate
+*.bi
+
 ipch/
 obj/
 [Bb]in
