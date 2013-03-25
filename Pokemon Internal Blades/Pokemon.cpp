@@ -27,7 +27,6 @@ Pokemon::Pokemon(const string &name, const string classification, const int type
 	m_type2 = type2;	// Set second type. If in real game, this does not exist, type2 is NONE.
 	SetIVs();
 	SetEVs();
-	SetStats();
 }
 
 

@@ -41,8 +41,8 @@ namespace pk
 		Move(void);
 
 		// Used for instantiating new moves
-		Move(std::string name, int acc, int speed, int power, int mp)
-			: m_name(name), m_accuracy(acc), m_speed(speed), m_power(power), m_mp(mp)
+		Move(std::string name, int acc, int speed, int power, int mp, const int moveType)
+			: m_name(name), m_accuracy(acc), m_speed(speed), m_power(power), m_mp(mp), m_moveType(moveType)
 		{
 		};
 

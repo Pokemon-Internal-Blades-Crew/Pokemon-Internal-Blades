@@ -103,6 +103,7 @@ namespace pk
 		// Set Actual Stats
 		void SetStats(void);
 
+
 	public:	
 		Pokemon(const string &name, const string classification, const int type1, const int type2, bool owned);
 
@@ -117,9 +118,18 @@ namespace pk
 			m_type2 = NONE;
 			SetIVs();
 			SetEVs();
-			SetStats();
 		};
 
+		void SetBaseStats(int hp, int att, int spAtt, int def, int spDef, int spd)
+		{
+			m_baseHealth = hp;
+			m_baseAttack = att;
+			m_baseSpAttack = spAtt;
+			m_baseDefense = def;
+			m_baseSpDefense = spDef;
+			m_baseSpeed = spd;
+			SetStats();
+		}
 
 		// -----------Getters-----------
 
