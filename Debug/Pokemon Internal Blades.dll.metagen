@@ -1,4 +1,5 @@
   PokemonInternalBlades.Game Window.resources - Embedded, ContainedInManifestFile, 
+  PokemonInternalBlades.Testing Window.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
 Assembly Pokemon Internal Blades, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
 	hash=SHA1, flags=PublicKey
@@ -18,4 +19,7 @@ Class PokemonInternalBlades.GameWindow: AutoLayout, AnsiClass, Class, Public, Be
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class PokemonInternalBlades.Class1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class PokemonInternalBlades.TestingWindow: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

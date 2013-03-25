@@ -35,15 +35,12 @@ AssemblyInfo.cpp
   Game Window.h(2):	// TODO: Write all GUI Implementation
   Move.h(7):		// TODO: Implement Effect Type
   Nature.h(5):		// TODO: Add Favorite Flavor of Berry and other assorted Nature Related Data
-  Pokemon.h(24):	// TODO: Write Effectiveness Code
   Pokemon.h(25):	// TODO: Implement Moves
   Pokemon.h(26):	// TODO: Implement Evolution
-  Pokemon.h(28):	// TODO: Create Item Class
   Pokemon.h(29):	// TODO: Create Held Item Class	from Item class
   Pokemon.h(30):	// TODO: Create Evolution Item Class from Item class
   Pokemon.h(31):	// TODO: Create Key Item Class from Item class
   Pokemon.h(32):	// TODO: Create Healing Item Class from Item class
-  Pokemon.h(33):	// TODO: Create Pokeball Class from Item class
   Pokemon.h(35):	// TODO: Create Pokedex Class
   Pokemon.h(36):	// TODO: Create Classification String for implementation with a Pokedex Class
   Pokemon.h(38):	// TODO: Create a Trainer Class

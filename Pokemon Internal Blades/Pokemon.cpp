@@ -16,9 +16,10 @@ using namespace std;
 using namespace pk;
 
 // Constructor.
-Pokemon::Pokemon(const string &name, const int type1, const int type2, bool owned)	
+Pokemon::Pokemon(const string &name, const string classification, const int type1, const int type2, bool owned)	
 {
 	m_name = name;		// Sets the Pokemon's name to name
+	m_classification = classification;	// Sets the pokemon's classification to classification.
     SetRandom();		// Starts Random Generator
 	m_isFainted = NO;	// Automatic is not fainted
 	m_owned = owned;	// Set owned status. True is trainer, false is wild.
@@ -104,6 +105,9 @@ double Pokemon::CheckTypeEffective(int moveType, int targetType)
 		case DRAGON:
 			effectiveness *= 0.5;
 			break;
+		case SHADOW:
+			effectiveness *= 0.5;
+			break;
 		default:
 			effectiveness *= 1.0;
 			break;
@@ -139,6 +143,9 @@ double Pokemon::CheckTypeEffective(int moveType, int targetType)
 		case BUG:
 			effectiveness *= 0.5;
 			break;
+		case SHADOW:
+			effectiveness *= 0.5;
+			break;
 		default:
 			effectiveness *= 1.0;
 			break;
@@ -148,6 +155,9 @@ double Pokemon::CheckTypeEffective(int moveType, int targetType)
 		switch(targetType)
 		{
 		case FIGHTING:
+			effectiveness *= 0.5;
+			break;
+		case SHADOW:
 			effectiveness *= 0.5;
 			break;
 		case GHOST:
@@ -177,6 +187,9 @@ double Pokemon::CheckTypeEffective(int moveType, int targetType)
 			effectiveness *= 0.5;
 			break;
 		case DRAGON:
+			effectiveness *= 0.5;
+			break;
+		case SHADOW:
 			effectiveness *= 0.5;
 			break;
 		default:
@@ -209,6 +222,9 @@ double Pokemon::CheckTypeEffective(int moveType, int targetType)
 			effectiveness *= 0.5;
 			break;
 		case STEEL:
+			effectiveness *= 0.5;
+			break;
+		case SHADOW:
 			effectiveness *= 0.5;
 			break;
 		default:
@@ -246,6 +262,9 @@ double Pokemon::CheckTypeEffective(int moveType, int targetType)
 		case DRAGON:
 			effectiveness *= 0.5;
 			break;
+		case SHADOW:
+			effectiveness *= 0.5;
+			break;
 		default:
 			effectiveness *= 1.0;
 			break;
@@ -278,6 +297,9 @@ double Pokemon::CheckTypeEffective(int moveType, int targetType)
 		case STEEL:
 			effectiveness *= 0.5;
 			break;
+		case SHADOW:
+			effectiveness *= 0.5;
+			break;
 		default:
 			effectiveness *= 1.0;
 			break;
@@ -299,6 +321,9 @@ double Pokemon::CheckTypeEffective(int moveType, int targetType)
 			effectiveness *= 0.5;
 			break;
 		case GHOST:
+			effectiveness *= 0.5;
+			break;
+		case SHADOW:
 			effectiveness *= 0.5;
 			break;
 		case STEEL:
@@ -330,6 +355,9 @@ double Pokemon::CheckTypeEffective(int moveType, int targetType)
 		case STEEL:
 			effectiveness *= 0.5;
 			break;
+		case SHADOW:
+			effectiveness *= 0.5;
+			break;
 		default:
 			effectiveness *= 1.0;
 			break;
@@ -348,6 +376,9 @@ double Pokemon::CheckTypeEffective(int moveType, int targetType)
 			effectiveness *= 0.5;
 			break;
 		case STEEL:
+			effectiveness *= 0.5;
+			break;
+		case SHADOW:
 			effectiveness *= 0.5;
 			break;
 		case DARK:
@@ -371,6 +402,9 @@ double Pokemon::CheckTypeEffective(int moveType, int targetType)
 			effectiveness *= 0.5;
 			break;
 		case STEEL:
+			effectiveness *= 0.5;
+			break;
+		case SHADOW:
 			effectiveness *= 0.5;
 			break;
 		case NORMAL:
@@ -397,6 +431,9 @@ double Pokemon::CheckTypeEffective(int moveType, int targetType)
 			effectiveness *= 0.5;
 			break;
 		case STEEL:
+			effectiveness *= 0.5;
+			break;
+		case SHADOW:
 			effectiveness *= 0.5;
 			break;
 		default:
@@ -431,6 +468,9 @@ double Pokemon::CheckTypeEffective(int moveType, int targetType)
 		case ICE:
 			effectiveness *= 0.5;
 			break;
+		case SHADOW:
+			effectiveness *= 0.5;
+			break;
 		case FLYING:
 			effectiveness *= 0.0;
 			break;
@@ -452,6 +492,9 @@ double Pokemon::CheckTypeEffective(int moveType, int targetType)
 			effectiveness *= 0.5;
 			break;
 		case GROUND:
+			effectiveness *= 0.5;
+			break;
+		case SHADOW:
 			effectiveness *= 0.5;
 			break;
 		default:
@@ -483,6 +526,9 @@ double Pokemon::CheckTypeEffective(int moveType, int targetType)
 		case STEEL:
 			effectiveness *= 0.5;
 			break;
+		case SHADOW:
+			effectiveness *= 0.5;
+			break;
 		default:
 			effectiveness *= 1.0;
 			break;
@@ -506,6 +552,9 @@ double Pokemon::CheckTypeEffective(int moveType, int targetType)
 		case DRAGON:
 			effectiveness *= 0.5;
 			break;
+		case SHADOW:
+			effectiveness *= 0.5;
+			break;
 		case GROUND:
 			effectiveness *= 0.0;
 			break;
@@ -521,6 +570,9 @@ double Pokemon::CheckTypeEffective(int moveType, int targetType)
 			effectiveness *= 2.0;
 			break;
 		case STEEL:
+			effectiveness *= 0.5;
+			break;
+		case SHADOW:
 			effectiveness *= 0.5;
 			break;
 		default:

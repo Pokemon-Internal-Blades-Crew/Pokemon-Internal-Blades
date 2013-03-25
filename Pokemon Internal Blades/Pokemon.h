@@ -24,11 +24,6 @@ using namespace pk;
 // TODO: Implement Moves
 // TODO: Implement Evolution
 
-// TODO: Create Held Item Class	from Item class
-// TODO: Create Evolution Item Class from Item class
-// TODO: Create Key Item Class from Item class
-// TODO: Create Healing Item Class from Item class
-
 // TODO: Create Pokedex Class
 // TODO: Create Classification String for implementation with a Pokedex Class
 
@@ -109,7 +104,7 @@ namespace pk
 		void SetStats(void);
 
 	public:	
-		Pokemon(const string &name, const int type1, const int type2, bool owned);
+		Pokemon(const string &name, const string classification, const int type1, const int type2, bool owned);
 
 		// Default constructor. 
 		// Sets name to blank and starts up the Random seed.
@@ -172,6 +167,9 @@ namespace pk
 
 		// Returns the second type
 		int GetType2(void){return m_type2;}
+
+		// Returns the classification of the Pokemon
+		string GetClassification(void){return m_classification;}
 
 
 		// -----------SETTERS-----------

@@ -83,28 +83,42 @@
     <ClInclude Include="Ability.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClInclude>
+    <ClInclude Include="Items\Berry.h" />
     <ClInclude Include="Constants.h" />
+    <ClInclude Include="Items\EvolutionItem.h" />
     <ClInclude Include="Game Window.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="Item.h" />
+    <ClInclude Include="Items\HealingItem.h" />
+    <ClInclude Include="Items\HeldItem.h" />
+    <ClInclude Include="Items\Item.h" />
+    <ClInclude Include="Items\KeyItem.h" />
     <ClInclude Include="Move.h" />
     <ClInclude Include="Nature.h" />
-    <ClInclude Include="Pokeball.h" />
+    <ClInclude Include="Items\Pokeball.h" />
     <ClInclude Include="Pokemon Internal Blades.h" />
     <ClInclude Include="Pokemon.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Stdafx.h" />
     <ClInclude Include="Story_Events.h" />
+    <ClInclude Include="Items\TM.h" />
+    <ClInclude Include="Testing Window.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Ability.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="Items\Berry.cpp" />
+    <ClCompile Include="Items\EvolutionItem.cpp" />
     <ClCompile Include="Game Window.cpp" />
-    <ClCompile Include="Item.cpp" />
+    <ClCompile Include="Items\HealingItem.cpp" />
+    <ClCompile Include="Items\HeldItem.cpp" />
+    <ClCompile Include="Items\Item.cpp" />
+    <ClCompile Include="Items\KeyItem.cpp" />
     <ClCompile Include="Move.cpp" />
     <ClCompile Include="Nature.cpp" />
-    <ClCompile Include="Pokeball.cpp" />
+    <ClCompile Include="Items\Pokeball.cpp" />
     <ClCompile Include="Pokemon Internal Blades.cpp" />
     <ClCompile Include="Pokemon.cpp" />
     <ClCompile Include="Stdafx.cpp">
@@ -112,6 +126,8 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Story_Events.cpp" />
+    <ClCompile Include="Items\TM.cpp" />
+    <ClCompile Include="Testing Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.ico" />
@@ -124,6 +140,12 @@
     <EmbeddedResource Include="Game Window.resx">
       <DependentUpon>Game Window.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Testing Window.resx">
+      <DependentUpon>Testing Window.h</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Text.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
