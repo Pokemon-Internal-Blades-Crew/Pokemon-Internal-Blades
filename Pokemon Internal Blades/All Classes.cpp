@@ -9,8 +9,7 @@
 /// </summary>
 
 #include "StdAfx.h"
-#include "Pokemon.h"
-#include "Move.h"
+#include "All Classes.h"
 #include <string>
 
 using namespace std;
@@ -596,90 +595,58 @@ double Pokemon::CheckTypeEffective(int moveType, int targetType)
 	
 	return effectiveness;
 }
-/*
-bool Pokemon::CheckStab(pk::Move move)
+
+bool Pokemon::CheckStab(Move move)
 {
 	bool isTrue;
 	if(move.GetTyping() == GetType1() || move.GetTyping() == GetType2())
 		isTrue = true;
 	else
 		isTrue = false;
-	return isTrue
-}*/
+	return isTrue;
+}
 
-// Goal: Create a Text Based Pokemon Game with unique attack moves
-//	Heirarchy
-//	. Overall Pokemon Game
-//		. Player Character Code
-//			. Name
-//			. Gender
-//			. Starter Pokemon
-//				. Nature determined by Personality Quiz
-//			. Team of 6
-//			. Box Pokemon
-//			. Personality
-//				. Determine by Personality Quiz
-//		. Pokemon Code
-//			. Stats
-//				. Health
-//				. Level
-//				. Attack
-//				. Special Attack
-//				. Defense
-//				. Special Defense
-//				. Speed
-//			. Moves
-//				. Target
-//				. Typing
-//				. Is Physical/Is Special/Is Stat Move
-//				. Damage Dealing
-//				. Accuracy
-//			. Types
-//				. Super effective against
-//				. Weak to
-//			. Nature
-//			. Ability
-//			. Evolves From
-//			. Evolves Into
-//		. Battle Code
-//			. Player
-//			. Opponent
-//				. Is Trainer
-//				. Is Wild
-//		. Story Code
-//			. Main Quest
-//				. Main Intro
-//					. See tPoA
-//					. Navi
-//					. 'It's dangerous to go alone'
-//					. Get starter
-//					. Personality Quiz during chute
-//				. Main Exposition
-//				. Main Rising Action
-//				. Main Climax
-//				. Main Falling Action
-//				. Main Resolution
-//			. Side Quests
-//		. Item Codes
-//			. Healing
-//			. Catching
-//			. TM
-//			. Key Item
-//			. Battle
-//			. Evolution
-//		. World
-//			. Towns
-//			. Routes
-//			. Cities
-//			. Alternate
-//		. Pokedex : Don't ask.
-//			. Navi
-//				. Natural Array Villain Identifier
-//			. Tatl Plugin
-//				. Target Aquiring Terrain Lister
-//			. Tael Plugin
-//				. Terrain and Environment Listings
-//			. Midna Plugin
-//				. Magicka Information Database - Nocturnal Advisor
-//			. Advisor Plugin
-//				. Algorithm: Depth and Volume Integration System - Operation R
+
+Move::Move(void)
+{
+	m_name = EMPTY;			// Empty Name
+	m_moveType = NORMAL;	// Normal Move: Default
+	m_accuracy = 1000;		// High accuracy
+	m_speed = 0;			// Normal Speed Priority
+	m_power = 0;			// Zero Power
+	m_mp = HIGH_MP;			// 30 MP
+}
+
+Pokemon Move::GetTarget(Pokemon target)
+{
+	return target;
+} 
+
+int Move::GetTyping()
+{
+	return m_moveType;
+}
+
+double Move::CheckEffectiveness(Pokemon user)
+{
+	double effectiveness = 1.0;
+
+	// sets selfType to the move's type;
+	int selfType = m_moveType;
+	
+	// sets placeholder int to the target's first type
+	int targetType1 = m_target.GetType1();
+
+	// sets placeholder int to the target's second type
+	int targetType2 = m_target.GetType2();
+	
+	// First run of the CheckTypeEffective
+	effectiveness *= user.CheckTypeEffective(selfType, targetType1);
+
+	// Second Run of the Check TYpe Effective
+	effectiveness *= user.CheckTypeEffective(selfType, targetType2);
+
+	return effectiveness;
+}
+
+

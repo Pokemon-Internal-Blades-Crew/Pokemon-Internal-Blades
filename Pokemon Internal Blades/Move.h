@@ -1,8 +1,6 @@
 #pragma once
 #include "Stdafx.h"
-#include "Pokemon.h"
-#include "Constants.h"
-using namespace pk;
+
 
 // TODO: Implement Effect Type
 // TODO: 
@@ -12,13 +10,13 @@ namespace pk
 	class Move
 	{
 	private:
-		Pokemon		pkmn1;
-		std::string m_name;			// Name of the move
+		
+		string m_name;			// Name of the move
 		int			m_accuracy;		// Base accuracy from 1 to 100. If n/a, set to 1000
 		int			m_speed;		// Speed priority is -8 to 8 inclusive with 8 is fastest
 		int			m_power;		// Move's base power.
 		int			m_mp;			// How many times move can be used.
-		Pokemon		m_target;		// Target of the Move
+		pk::Pokemon		m_target;		// Target of the Move
 		int			m_moveType;		// Type of the Move;
 
 		// setters
@@ -41,7 +39,7 @@ namespace pk
 		Move(void);
 
 		// Used for instantiating new moves
-		Move(std::string name, int acc, int speed, int power, int mp, const int moveType)
+		Move(string name, int acc, int speed, int power, int mp, const int moveType)
 			: m_name(name), m_accuracy(acc), m_speed(speed), m_power(power), m_mp(mp), m_moveType(moveType)
 		{
 		};
@@ -67,7 +65,7 @@ namespace pk
 		Pokemon GetTarget(){return m_target;};	
 
 		// Sets the target of the move
-		void SetTarget(Pokemon target){m_target = target;}			
+		void SetTarget(pk::Pokemon target){m_target = target;}			
 
 		// Calls the Setters in one method
 		void SetMoveStats(int acc, int speed, int power, int mp)	
@@ -86,7 +84,7 @@ namespace pk
 		Pokemon GetTarget(Pokemon target);
 		
 		// Checks the effectiveness of the Move to the target.
-		double CheckEffectiveness(Pokemon target);
+		double CheckEffectiveness(Pokemon user);
 		
 
 	// Pokemon GetTarget(void){return m_target;}

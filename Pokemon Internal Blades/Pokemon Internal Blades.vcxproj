@@ -74,6 +74,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Ability.cpp" />
+    <ClCompile Include="All Classes.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="Game Window.cpp" />
     <ClCompile Include="Items\Berry.cpp" />
@@ -84,10 +85,8 @@
     <ClCompile Include="Items\KeyItem.cpp" />
     <ClCompile Include="Items\Pokeball.cpp" />
     <ClCompile Include="Items\TM.cpp" />
-    <ClCompile Include="Move.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="Nature.cpp" />
-    <ClCompile Include="Pokemon.cpp" />
     <ClCompile Include="Stdafx.cpp" />
     <ClCompile Include="Story_Events.cpp" />
     <ClCompile Include="Testing Window.cpp" />
@@ -102,6 +101,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ability.h" />
+    <ClInclude Include="All Classes.h" />
     <ClInclude Include="Constants.h" />
     <ClInclude Include="Game Window.h" />
     <ClInclude Include="Items\Berry.h" />
@@ -112,12 +112,10 @@
     <ClInclude Include="Items\KeyItem.h" />
     <ClInclude Include="Items\Pokeball.h" />
     <ClInclude Include="Items\TM.h" />
-    <ClInclude Include="Move.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Nature.h" />
-    <ClInclude Include="Pokemon.h" />
     <ClInclude Include="Stdafx.h" />
     <ClInclude Include="Story_Events.h" />
     <ClInclude Include="Testing Window.h">

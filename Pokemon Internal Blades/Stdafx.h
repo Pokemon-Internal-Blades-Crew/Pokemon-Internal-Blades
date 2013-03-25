@@ -7,3 +7,6 @@
 #include <iostream>
 #include <cstdlib> // for rand() and srand()
 #include <ctime> // for time()
+#include "Nature.h"
+#include "Ability.h"
+#include "Constants.h"
