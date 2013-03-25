@@ -19,6 +19,7 @@ using namespace pk;
 Pokemon::Pokemon(const string &name, const string classification, const int type1, const int type2, bool owned)	
 {
 	m_name = name;		// Sets the Pokemon's name to name
+	m_nickname = name;
 	m_classification = classification;	// Sets the pokemon's classification to classification.
     SetRandom();		// Starts Random Generator
 	m_isFainted = NO;	// Automatic is not fainted

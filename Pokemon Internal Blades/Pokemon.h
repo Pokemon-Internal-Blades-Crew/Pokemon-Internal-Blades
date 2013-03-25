@@ -181,6 +181,12 @@ namespace pk
 		// Returns the classification of the Pokemon
 		string GetClassification(void){return m_classification;}
 
+		// Returns the species of Pokemon
+		string GetName(void){return m_name;}
+
+		// Returns the nickname of the Pokemon
+		string GetNickName(void){return m_nickname;}
+
 
 		// -----------SETTERS-----------
 

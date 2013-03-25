@@ -15,99 +15,28 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Pokemon Internal Blades.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Stdafx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Story_Events.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Pokemon.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Move.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Nature.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Ability.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Constants.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Game Window.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Items\HealingItem.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Items\HeldItem.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Items\EvolutionItem.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Items\Item.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Items\KeyItem.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Items\Pokeball.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Items\TM.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Items\Berry.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Testing Window.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Pokemon Internal Blades.cpp">
+    <ClCompile Include="WinCLI.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AssemblyInfo.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="MyForm.cpp">
+      <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="Stdafx.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Pokemon.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Story_Events.cpp">
+    <ClCompile Include="Ability.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Move.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Nature.cpp">
+    <ClCompile Include="Items\Berry.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Ability.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Game Window.cpp">
+    <ClCompile Include="Items\EvolutionItem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Items\HealingItem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Items\HeldItem.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Items\EvolutionItem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Items\Item.cpp">
@@ -122,7 +51,16 @@
     <ClCompile Include="Items\TM.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Items\Berry.cpp">
+    <ClCompile Include="Nature.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Pokemon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Story_Events.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Testing Window.cpp">
@@ -130,22 +68,61 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ReadMe.txt" />
-    <None Include="app.ico">
-      <Filter>Resource Files</Filter>
-    </None>
+    <ClInclude Include="MyForm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Ability.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Constants.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Move.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Items\Berry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Items\EvolutionItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Items\HealingItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Items\HeldItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Items\Item.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Items\KeyItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Items\Pokeball.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Items\TM.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Nature.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Pokemon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Story_Events.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Testing Window.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="app.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Game Window.resx">
+    <EmbeddedResource Include="Testing Window.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="Text.txt" />
   </ItemGroup>
 </Project>

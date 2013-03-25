@@ -11,25 +11,25 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{C206DC34-2CC4-42AB-9B2D-AFE76D59C3BF}</ProjectGuid>
+    <ProjectGuid>{D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F}</ProjectGuid>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <Keyword>ManagedCProj</Keyword>
-    <RootNamespace>PokemonInternalBlades</RootNamespace>
+    <RootNamespace>Pokemon_Internal_Blades</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
     <CLRSupport>true</CLRSupport>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
     <CLRSupport>true</CLRSupport>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -42,7 +42,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LinkIncremental>false</LinkIncremental>
+    <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -52,26 +52,45 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PrecompiledHeader>Use</PrecompiledHeader>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>
-      </AdditionalDependencies>
+      <AdditionalDependencies />
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PrecompiledHeader>Use</PrecompiledHeader>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>
-      </AdditionalDependencies>
+      <AdditionalDependencies />
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Ability.cpp" />
+    <ClCompile Include="Items\Berry.cpp" />
+    <ClCompile Include="Items\EvolutionItem.cpp" />
+    <ClCompile Include="Items\HealingItem.cpp" />
+    <ClCompile Include="Items\HeldItem.cpp" />
+    <ClCompile Include="Items\Item.cpp" />
+    <ClCompile Include="Items\KeyItem.cpp" />
+    <ClCompile Include="Items\Pokeball.cpp" />
+    <ClCompile Include="Items\TM.cpp" />
+    <ClCompile Include="Move.cpp" />
+    <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="Nature.cpp" />
+    <ClCompile Include="Pokemon.cpp" />
+    <ClCompile Include="Stdafx.cpp" />
+    <ClCompile Include="Story_Events.cpp" />
+    <ClCompile Include="Testing Window.cpp" />
+    <ClCompile Include="WinCLI.cpp" />
+  </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -80,72 +99,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Ability.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="Items\Berry.h" />
+    <ClInclude Include="Ability.h" />
     <ClInclude Include="Constants.h" />
+    <ClInclude Include="Items\Berry.h" />
     <ClInclude Include="Items\EvolutionItem.h" />
-    <ClInclude Include="Game Window.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
     <ClInclude Include="Items\HealingItem.h" />
     <ClInclude Include="Items\HeldItem.h" />
     <ClInclude Include="Items\Item.h" />
     <ClInclude Include="Items\KeyItem.h" />
-    <ClInclude Include="Move.h" />
-    <ClInclude Include="Nature.h" />
     <ClInclude Include="Items\Pokeball.h" />
-    <ClInclude Include="Pokemon Internal Blades.h" />
+    <ClInclude Include="Items\TM.h" />
+    <ClInclude Include="Move.h" />
+    <ClInclude Include="MyForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Nature.h" />
     <ClInclude Include="Pokemon.h" />
-    <ClInclude Include="resource.h" />
     <ClInclude Include="Stdafx.h" />
     <ClInclude Include="Story_Events.h" />
-    <ClInclude Include="Items\TM.h" />
     <ClInclude Include="Testing Window.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Ability.cpp" />
-    <ClCompile Include="AssemblyInfo.cpp" />
-    <ClCompile Include="Items\Berry.cpp" />
-    <ClCompile Include="Items\EvolutionItem.cpp" />
-    <ClCompile Include="Game Window.cpp" />
-    <ClCompile Include="Items\HealingItem.cpp" />
-    <ClCompile Include="Items\HeldItem.cpp" />
-    <ClCompile Include="Items\Item.cpp" />
-    <ClCompile Include="Items\KeyItem.cpp" />
-    <ClCompile Include="Move.cpp" />
-    <ClCompile Include="Nature.cpp" />
-    <ClCompile Include="Items\Pokeball.cpp" />
-    <ClCompile Include="Pokemon Internal Blades.cpp" />
-    <ClCompile Include="Pokemon.cpp" />
-    <ClCompile Include="Stdafx.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="Story_Events.cpp" />
-    <ClCompile Include="Items\TM.cpp" />
-    <ClCompile Include="Testing Window.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.ico" />
-    <None Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="app.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Game Window.resx">
-      <DependentUpon>Game Window.h</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Testing Window.resx">
       <DependentUpon>Testing Window.h</DependentUpon>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="Text.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
