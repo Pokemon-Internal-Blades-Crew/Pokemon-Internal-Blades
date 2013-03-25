@@ -2,7 +2,7 @@
 ///	This is code for Internal Blades' story line
 /// It will likely use an event system based upon that of Skyrim's.
 /// Build Date: 02/09/13
-/// Authore:	Kyle Amos
+/// Author:	Kyle Amos
 /// </summary>
 
 #include "StdAfx.h"

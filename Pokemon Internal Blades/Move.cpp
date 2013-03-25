@@ -1,3 +1,8 @@
+/// <summary>
+///	This is code for Internal Blades' Move System
+/// Build Date: 03/24/13
+/// Author:	Kyle Amos
+/// </summary>
 #include "StdAfx.h"
 #include "Move.h"
 #include "Constants.h"

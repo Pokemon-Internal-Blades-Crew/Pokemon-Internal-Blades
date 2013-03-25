@@ -1,10 +1,18 @@
+/// <summary>
+///	This is code for Internal Blades' Nature System
+/// 
+/// Build Date: 03/24/13
+/// Author:	Kyle Amos
+/// </summary>
+
 #include "StdAfx.h"
 #include "Nature.h"
 
 using namespace pk;
 using namespace std;
 
-Nature::Nature(void)	// Set as a Neutral Nature
+// Set as a Neutral Nature
+Nature::Nature(void)	
 {
 	m_name = EMPTY;
 	m_attMod = NORMAL_STAT;
@@ -13,7 +21,7 @@ Nature::Nature(void)	// Set as a Neutral Nature
 	m_spdefMod = NORMAL_STAT;
 	m_speedMod = NORMAL_STAT;
 }
-//Nature::InitializeList()
+
 void InitializeList()
 {
 

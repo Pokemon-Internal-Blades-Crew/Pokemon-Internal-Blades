@@ -1,13 +1,12 @@
-
-/*
-						Kyle Amos
-				  Project Internal Blades
-	This is my attempt at a text-based Pokemon syle
-	game. Plans include data for all pokemon, including
-	movesets, base stats, natures, evolution trees, and
-	more! 
-
-*/
+///	<summary>
+///						Kyle Amos
+///				  Project Internal Blades
+///	This is my attempt at a text-based Pokemon syle
+///	game. Plans include data for all pokemon, including
+///	movesets, base stats, natures, evolution trees, and
+///	more! 
+///
+/// </summary>
 
 #include "StdAfx.h"
 #include "Pokemon.h"
@@ -16,35 +15,61 @@
 using namespace std;
 using namespace pk;
 
-
-Pokemon::Pokemon(const string &name, int type1, int type2)	// Constructor. Creates a Pokemon with this name
+// Constructor.
+Pokemon::Pokemon(const string &name, const int type1, const int type2, bool owned)	
 {
-	m_name = name;
-    SetRandom();
-	m_isFainted = NO;
-	m_owned = NO;
-	m_type1 = type1;
-	m_type2 = type2;
+	m_name = name;		// Sets the Pokemon's name to name
+    SetRandom();		// Starts Random Generator
+	m_isFainted = NO;	// Automatic is not fainted
+	m_owned = owned;	// Set owned status. True is trainer, false is wild.
+	m_type1 = type1;	// Set first type.
+	m_type2 = type2;	// Set second type. If in real game, this does not exist, type2 is NONE.
+	SetIVs();
+	SetEVs();
+	SetStats();
 }
 
-void Pokemon::SetIVs(void)	// Sets the Individual values from 1 to 31
+
+// Sets the Individual values from 1 to 31
+void Pokemon::SetIVs(void)	
 { 
-	m_attIV = GetRandom(1, 31); // Attack Individual Values (IV) from 1 to 31
-	m_spAttIV = Pokemon::GetRandom(1, 31); // Special Attack IV from 1 to 31
-	m_defIV = Pokemon::GetRandom(1, 31); // Defense IV from 1 to 31
-	m_spDefIV = Pokemon::GetRandom(1, 31); // Special Defense IV from 1 to 31
-	m_speedIV = Pokemon::GetRandom(1, 31); // Speed IV from 1 to 31
+	m_hpIV = Pokemon::GetRandom(1, 31);		// HP Individual Value from 1 to 31
+	m_attIV = Pokemon::GetRandom(1, 31);	// Attack Individual Values (IV) from 1 to 31
+	m_spAttIV = Pokemon::GetRandom(1, 31);	// Special Attack IV from 1 to 31
+	m_defIV = Pokemon::GetRandom(1, 31);	// Defense IV from 1 to 31
+	m_spDefIV = Pokemon::GetRandom(1, 31);	// Special Defense IV from 1 to 31
+	m_speedIV = Pokemon::GetRandom(1, 31);	// Speed IV from 1 to 31
 }
-void Pokemon::SetEVs(void) // Eventually this should set the EV's to 0, but this is for the sake of testing.
+
+// Eventually this should set the EV's to 0, but this is for the sake of testing.
+void Pokemon::SetEVs(void)
 {	
 	// EV codes
-	m_attEV = Pokemon::GetRandom(0, 255); // Attack Effort Values (EV) from 0 to 255
-	m_spAttEV = Pokemon::GetRandom(0, 255); // Special Attack Effort Values (EV) from 0 to 255
-	m_defEV = Pokemon::GetRandom(0, 255); // Defense Effort Values (EV) from 0 to 255
-	m_spDefEV = Pokemon::GetRandom(0, 255); // Special Defense Effort Values (EV) from 0 to 255
-	m_speedEV = Pokemon::GetRandom(0, 255); // Speed Effort Values (EV) from 0 to 255
+	m_hpEV =	0;	// HP Effort Values
+	m_attEV =	0;	// Attack Effort Values (EV)
+	m_spAttEV =	0;	// Special Attack Effort Values (EV)
+	m_defEV =	0;	// Defense Effort Values (EV)
+	m_spDefEV =	0;	// Special Defense Effort Values (EV)
+	m_speedEV =	0;	// Speed Effort Values (EV)
 
 }
+
+// Sets Stats. Fairly Self Explanatory.
+void Pokemon::SetStats(void)
+{
+	/*
+		Attack, Defense, Speed, Sp. Attack, Sp. Defense:
+           (((IV + 2 * BaseStat + (EV/4) ) * Level/100 ) + 5) * Nature Value
+	*/
+
+	m_HP =			(int)(((m_hpIV		+ 2 * m_baseHealth		+ ((double)m_hpEV / 4))		* ((double)m_level / 100)) + 10 + m_level);
+	m_Attack =		(int)((((m_attIV	+ 2 * m_baseAttack		+ ((double)m_attEV / 4))	* ((double)m_level / 100)) + 5) * GetNature().GetAttackMod());
+	m_SpAttack =	(int)((((m_spAttIV	+ 2 * m_baseSpAttack	+ ((double)m_spAttEV / 4))	* ((double)m_level / 100)) + 5) * GetNature().GetSpAttackMod());
+	m_Defense =		(int)((((m_defIV	+ 2 * m_baseDefense		+ ((double)m_defEV / 4))	* ((double)m_level / 100)) + 5) * GetNature().GetDefenseMod());
+	m_SpDefense =	(int)((((m_spDefIV	+ 2 * m_baseSpDefense	+ ((double)m_spDefEV / 4))	* ((double)m_level / 100)) + 5) * GetNature().GetSpDefenseMod());
+	m_Speed =		(int)((((m_speedIV	+ 2 * m_baseSpeed		+ ((double)m_speedEV / 4))	* ((double)m_level / 100)) + 5) * GetNature().GetSpeedMod());
+}
+
 // Goal: Create a Text Based Pokemon Game with unique attack moves
 //	Heirarchy
 //	. Overall Pokemon Game
@@ -89,7 +114,7 @@ void Pokemon::SetEVs(void) // Eventually this should set the EV's to 0, but this
 //				. Main Intro
 //					. See tPoA
 //					. Navi
-//					. 'It's dangerous to go alone
+//					. 'It's dangerous to go alone'
 //					. Get starter
 //					. Personality Quiz during chute
 //				. Main Exposition
@@ -103,10 +128,13 @@ void Pokemon::SetEVs(void) // Eventually this should set the EV's to 0, but this
 //			. Catching
 //			. TM
 //			. Key Item
+//			. Battle
+//			. Evolution
 //		. World
 //			. Towns
 //			. Routes
 //			. Cities
+//			. Alternate
 //		. Pokedex : Don't ask.
 //			. Navi
 //				. Natural Array Villain Identifier

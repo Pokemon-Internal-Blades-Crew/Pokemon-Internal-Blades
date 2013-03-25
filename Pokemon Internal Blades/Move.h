@@ -4,6 +4,9 @@
 #include "Constants.h"
 using namespace pk;
 
+// TODO: Implement Effect Type
+// TODO: 
+
 namespace pk
 {
 	class Move
@@ -18,28 +21,55 @@ namespace pk
 		int			m_moveType;		// Type of the Move;
 
 		// setters
-		void SetAccuracy(int acc){m_accuracy = acc;}	// Sets the move Accuracy
-		void SetSpeed(int speed){m_speed = speed;}		// Sets the Move's speed Priority
-		void SetPower(int power){m_power = power;}		// Sets the move's base power.
-		void SetMP(int mp){m_mp = mp;}					// Set the move's move points; ie. How many times the move can be used.
+
+		// Sets the move Accuracy
+		void SetAccuracy(int acc){m_accuracy = acc;}	
+
+		// Sets the Move's speed Priority
+		void SetSpeed(int speed){m_speed = speed;}		
+
+		// Sets the move's base power.
+		void SetPower(int power){m_power = power;}
+		
+		// Set the move's move points 
+		// IE. How many times the move can be used.
+		void SetMP(int mp){m_mp = mp;}					
 	
 	public:
+		// Default Constructor
 		Move(void);
-		Move(std::string name, int acc, int speed, int power, int mp) // Used for instantiating new moves
+
+		// Used for instantiating new moves
+		Move(std::string name, int acc, int speed, int power, int mp)
 			: m_name(name), m_accuracy(acc), m_speed(speed), m_power(power), m_mp(mp)
 		{
 		};
 
 		// getters
-		std::string GetName(void){return m_name;};	// Returns the name of the move
-		int GetAccuracy(void){return m_accuracy;};	// Returns the accuracy of the move
-		int GetPriority(void){return m_speed;};		// Returns the speed priority
-		int GetPower(void){return m_power;};		// Returns the move's power
-		int GetMP(void){return m_mp;};				// Returns the move's base MP
-		Pokemon GetTarget(){return m_target;};		// Returns the target of the move
 
-		void SetTarget(Pokemon target){m_target = target;}			// Sets the target of the move
-		void SetMoveStats(int acc, int speed, int power, int mp)	// Calls the Setters in one method
+		// Returns the name of the move
+		std::string GetName(void){return m_name;};
+
+		// Returns the accuracy of the move
+		int GetAccuracy(void){return m_accuracy;};	
+
+		// Returns the speed priority	
+		int GetPriority(void){return m_speed;};	
+
+		// Returns the move's power
+		int GetPower(void){return m_power;};	
+
+		// Returns the move's base MP
+		int GetMP(void){return m_mp;};			
+
+		// Returns the target of the move
+		Pokemon GetTarget(){return m_target;};	
+
+		// Sets the target of the move
+		void SetTarget(Pokemon target){m_target = target;}			
+
+		// Calls the Setters in one method
+		void SetMoveStats(int acc, int speed, int power, int mp)	
 		{
 			SetAccuracy(acc);	// Sets accuracy to acc
 			SetSpeed(speed);	// Sets speed to speed
@@ -48,9 +78,11 @@ namespace pk
 		}
 
 
+		// Used for STAB
+		int GetTyping();
 
-		int GetTyping();					// Used for STAB
-		Pokemon GetTarget(Pokemon target);	// Used to get target
+		// Used to get target
+		Pokemon GetTarget(Pokemon target);
 
 
 	// Pokemon GetTarget(void){return m_target;}
