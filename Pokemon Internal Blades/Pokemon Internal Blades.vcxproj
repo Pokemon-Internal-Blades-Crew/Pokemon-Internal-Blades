@@ -87,8 +87,10 @@
     <ClInclude Include="Game Window.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Item.h" />
     <ClInclude Include="Move.h" />
     <ClInclude Include="Nature.h" />
+    <ClInclude Include="Pokeball.h" />
     <ClInclude Include="Pokemon Internal Blades.h" />
     <ClInclude Include="Pokemon.h" />
     <ClInclude Include="resource.h" />
@@ -99,8 +101,10 @@
     <ClCompile Include="Ability.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="Game Window.cpp" />
+    <ClCompile Include="Item.cpp" />
     <ClCompile Include="Move.cpp" />
     <ClCompile Include="Nature.cpp" />
+    <ClCompile Include="Pokeball.cpp" />
     <ClCompile Include="Pokemon Internal Blades.cpp" />
     <ClCompile Include="Pokemon.cpp" />
     <ClCompile Include="Stdafx.cpp">
@@ -115,6 +119,11 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Game Window.resx">
+      <DependentUpon>Game Window.h</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

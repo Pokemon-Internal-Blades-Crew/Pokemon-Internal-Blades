@@ -24,7 +24,7 @@ namespace pk
 		Nature(void);
 
 		// Constructor for new Natures
-		Nature(std::string name, double atMod, double spatMod, double defMod, double spdefMod, double spdMod){
+		Nature(std::string name, const double atMod, const double spatMod, const double defMod, const double spdefMod, const double spdMod){
 			m_attMod = (atMod);			// Sets attack mod value
 			m_spattMod = (spatMod);		// Sets spatt mod value
 			m_defMod = (defMod);		// sets def mod value

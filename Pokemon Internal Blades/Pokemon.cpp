@@ -70,6 +70,481 @@ void Pokemon::SetStats(void)
 	m_Speed =		(int)((((m_speedIV	+ 2 * m_baseSpeed		+ ((double)m_speedEV / 4))	* ((double)m_level / 100)) + 5) * GetNature().GetSpeedMod());
 }
 
+// Checks the Effectiveness of ownType to targetType and returns a number between 0.0 and 2.0
+double Pokemon::CheckTypeEffective(int moveType, int targetType)
+{
+	double effectiveness = 1.0;
+
+	switch(moveType)
+	{
+	case FIRE:
+		switch(targetType)
+		{
+		case GRASS:
+			effectiveness *= 2.0;
+			break;
+		case ICE:
+			effectiveness *= 2.0;
+			break;
+		case STEEL:
+			effectiveness *= 2.0;
+			break;
+		case BUG:
+			effectiveness *= 2.0;
+			break;
+		case FIRE:
+			effectiveness *= 0.5;
+			break;
+		case WATER:
+			effectiveness *= 0.5;
+			break;
+		case ROCK:
+			effectiveness *= 0.5;
+			break;
+		case DRAGON:
+			effectiveness *= 0.5;
+			break;
+		default:
+			effectiveness *= 1.0;
+			break;
+		}
+		break;
+	case FIGHTING:
+		switch(targetType)
+		{
+		case NORMAL:
+			effectiveness *= 2.0;
+			break;
+		case ICE:
+			effectiveness *= 2.0;
+			break;
+		case DARK:
+			effectiveness *= 2.0;
+			break;
+		case ROCK:
+			effectiveness *= 2.0;
+			break;
+		case STEEL:
+			effectiveness *= 2.0;
+			break;
+		case POISON:
+			effectiveness *= 0.5;
+			break;
+		case FLYING:
+			effectiveness *= 0.5;
+			break;
+		case PSYCHIC:
+			effectiveness *= 0.5;
+			break;
+		case BUG:
+			effectiveness *= 0.5;
+			break;
+		default:
+			effectiveness *= 1.0;
+			break;
+		}
+		break;
+	case NORMAL:
+		switch(targetType)
+		{
+		case FIGHTING:
+			effectiveness *= 0.5;
+			break;
+		case GHOST:
+			effectiveness *= 0.0;
+			break;
+		default:
+			effectiveness *= 1.0;
+			break;
+		}
+		break;
+	case WATER:
+		switch(targetType)
+		{
+		case FIRE:
+			effectiveness *= 2.0;
+			break;
+		case GROUND:
+			effectiveness *= 2.0;
+			break;
+		case ROCK:
+			effectiveness *= 2.0;
+			break;
+		case WATER:
+			effectiveness *= 0.5;
+			break;
+		case GRASS:
+			effectiveness *= 0.5;
+			break;
+		case DRAGON:
+			effectiveness *= 0.5;
+			break;
+		default:
+			effectiveness *= 1.0;
+			break;
+		}
+		break;
+	case ICE:
+		switch(targetType)
+		{
+		case GRASS:
+			effectiveness *= 2.0;
+			break;
+		case GROUND:
+			effectiveness *= 2.0;
+			break;
+		case FLYING:
+			effectiveness *= 2.0;
+			break;
+		case DRAGON:
+			effectiveness *= 2.0;
+			break;
+		case WATER:
+			effectiveness *= 0.5;
+			break;
+		case FIRE:
+			effectiveness *= 0.5;
+			break;
+		case ICE:
+			effectiveness *= 0.5;
+			break;
+		case STEEL:
+			effectiveness *= 0.5;
+			break;
+		default:
+			effectiveness *= 1.0;
+			break;
+		}
+		break;
+	case GRASS:
+		switch(targetType)
+		{
+		case WATER:
+			effectiveness *= 2.0;
+			break;
+		case GROUND:
+			effectiveness *= 2.0;
+			break;
+		case ROCK:
+			effectiveness *= 2.0;
+			break;
+		case FIRE:
+			effectiveness *= 0.5;
+			break;
+		case GRASS:
+			effectiveness *= 0.5;
+			break;
+		case POISON:
+			effectiveness *= 0.5;
+			break;
+		case FLYING:
+			effectiveness *= 0.5;
+			break;
+		case BUG:
+			effectiveness *= 0.5;
+			break;
+		case DRAGON:
+			effectiveness *= 0.5;
+			break;
+		default:
+			effectiveness *= 1.0;
+			break;
+		}
+		break;
+	case BUG:
+		switch(targetType)
+		{
+		case PSYCHIC:
+			effectiveness *= 2.0;
+			break;
+		case GRASS:
+			effectiveness *= 2.0;
+			break;
+		case DARK:
+			effectiveness *= 2.0;
+			break;
+		case FIRE:
+			effectiveness *= 0.5;
+			break;
+		case FIGHTING:
+			effectiveness *= 0.5;
+			break;
+		case POISON:
+			effectiveness *= 0.5;
+			break;
+		case GHOST:
+			effectiveness *= 0.5;
+			break;
+		case STEEL:
+			effectiveness *= 0.5;
+			break;
+		default:
+			effectiveness *= 1.0;
+			break;
+		}
+		break;
+	case POISON:
+		switch(targetType)
+		{
+		case GRASS:
+			effectiveness *= 2.0;
+			break;
+		case GROUND:
+			effectiveness *= 0.5;
+			break;
+		case ROCK:
+			effectiveness *= 0.5;
+			break;
+		case POISON:
+			effectiveness *= 0.5;
+			break;
+		case GHOST:
+			effectiveness *= 0.5;
+			break;
+		case STEEL:
+			effectiveness *= 0.0;
+			break;
+		default:
+			effectiveness *= 1.0;
+			break;
+		}
+		break;
+	case FLYING:
+		switch(targetType)
+		{
+		case GRASS:
+			effectiveness *= 2.0;
+			break;
+		case BUG:
+			effectiveness *= 2.0;
+			break;
+		case FIGHTING:
+			effectiveness *= 2.0;
+			break;
+		case ELECTRIC:
+			effectiveness *= 0.5;
+			break;
+		case ROCK:
+			effectiveness *= 0.5;
+			break;
+		case STEEL:
+			effectiveness *= 0.5;
+			break;
+		default:
+			effectiveness *= 1.0;
+			break;
+		}
+		break;
+	case PSYCHIC:
+		switch(targetType)
+		{
+		case POISON:
+			effectiveness *= 2.0;
+			break;
+		case FIGHTING:
+			effectiveness *= 2.0;
+			break;
+		case PSYCHIC:
+			effectiveness *= 0.5;
+			break;
+		case STEEL:
+			effectiveness *= 0.5;
+			break;
+		case DARK:
+			effectiveness *= 0.0;
+			break;
+		default:
+			effectiveness *= 1.0;
+			break;
+		}
+		break;
+	case GHOST:
+		switch(targetType)
+		{
+		case PSYCHIC:
+			effectiveness *= 2.0;
+			break;
+		case GHOST:
+			effectiveness *= 2.0;
+			break;
+		case DARK:
+			effectiveness *= 0.5;
+			break;
+		case STEEL:
+			effectiveness *= 0.5;
+			break;
+		case NORMAL:
+			effectiveness *= 0.0;
+			break;
+		default:
+			effectiveness *= 1.0;
+			break;
+		}
+		break;
+	case DARK:
+		switch(targetType)
+		{
+		case PSYCHIC:
+			effectiveness *= 2.0;
+			break;
+		case GHOST:
+			effectiveness *= 2.0;
+			break;
+		case FIGHTING:
+			effectiveness *= 0.5;
+			break;
+		case DARK:
+			effectiveness *= 0.5;
+			break;
+		case STEEL:
+			effectiveness *= 0.5;
+			break;
+		default:
+			effectiveness *= 1.0;
+			break;
+		}
+		break;
+	case GROUND:
+		switch(targetType)
+		{
+		case FIRE:
+			effectiveness *= 2.0;
+			break;
+		case ELECTRIC:
+			effectiveness *= 2.0;
+			break;
+		case POISON:
+			effectiveness *= 2.0;
+			break;
+		case ROCK:
+			effectiveness *= 2.0;
+			break;
+		case STEEL:
+			effectiveness *= 2.0;
+			break;
+		case WATER:
+			effectiveness *= 0.5;
+			break;
+		case GRASS:
+			effectiveness *= 0.5;
+			break;
+		case ICE:
+			effectiveness *= 0.5;
+			break;
+		case FLYING:
+			effectiveness *= 0.0;
+			break;
+		default:
+			effectiveness *= 1.0;
+			break;
+		}
+		break;
+	case STEEL:
+		switch(targetType)
+		{
+		case ICE:
+			effectiveness *= 2.0;
+			break;
+		case BUG:
+			effectiveness *= 2.0;
+			break;
+		case FIRE:
+			effectiveness *= 0.5;
+			break;
+		case GROUND:
+			effectiveness *= 0.5;
+			break;
+		default:
+			effectiveness *= 1.0;
+			break;
+		}
+		break;
+	case ROCK:
+		switch(targetType)
+		{
+		case FIRE:
+			effectiveness *= 2.0;
+			break;
+		case ICE:
+			effectiveness *= 2.0;
+			break;
+		case FLYING:
+			effectiveness *= 2.0;
+			break;
+		case BUG:
+			effectiveness *= 2.0;
+			break;
+		case FIGHTING:
+			effectiveness *= 0.5;
+			break;
+		case GROUND:
+			effectiveness *= 0.5;
+			break;
+		case STEEL:
+			effectiveness *= 0.5;
+			break;
+		default:
+			effectiveness *= 1.0;
+			break;
+		}
+		break;
+	case ELECTRIC:
+		switch(targetType)
+		{
+		case WATER:
+			effectiveness *= 2.0;
+			break;
+		case FLYING:
+			effectiveness *= 2.0;
+			break;
+		case ELECTRIC:
+			effectiveness *= 0.5;
+			break;
+		case GRASS:
+			effectiveness *= 0.5;
+			break;
+		case DRAGON:
+			effectiveness *= 0.5;
+			break;
+		case GROUND:
+			effectiveness *= 0.0;
+			break;
+		default:
+			effectiveness *= 1.0;
+			break;
+		}
+		break;
+	case DRAGON:
+		switch(targetType)
+		{
+		case DRAGON:
+			effectiveness *= 2.0;
+			break;
+		case STEEL:
+			effectiveness *= 0.5;
+			break;
+		default:
+			effectiveness *= 1.0;
+			break;
+		}
+		break;
+	case SHADOW:
+		switch(targetType)
+		{
+		case SHADOW:
+			effectiveness *= 1.0;
+			break;
+		default:
+			effectiveness *= 2.0;
+			break;
+		}
+		break;
+	}
+
+	
+	return effectiveness;
+}
+
 // Goal: Create a Text Based Pokemon Game with unique attack moves
 //	Heirarchy
 //	. Overall Pokemon Game

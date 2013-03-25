@@ -26,3 +26,26 @@ int Move::GetTyping()
 {
 	return m_moveType;
 }
+
+double Move::CheckEffectiveness(Pokemon target)
+{
+	double effectiveness = 1.0;
+
+	// sets selfType to the move's type;
+	int selfType = m_moveType;
+	
+	// sets placeholder int to the target's first type
+	int targetType1 = target.GetType1();
+
+	// sets placeholder int to the target's second type
+	int targetType2 = target.GetType2();
+	
+	// First run of the CheckTypeEffective
+	effectiveness *= pkmn1.CheckTypeEffective(selfType, targetType1);
+
+	// Second Run of the Check TYpe Effective
+	effectiveness *= pkmn1.CheckTypeEffective(selfType, targetType2);
+
+	return effectiveness;
+}
+

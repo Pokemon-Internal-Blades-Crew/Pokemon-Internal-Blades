@@ -21,16 +21,13 @@
 using namespace std;
 using namespace pk;
 
-// TODO: Write Effectiveness Code
 // TODO: Implement Moves
 // TODO: Implement Evolution
 
-// TODO: Create Item Class
-// TODO: Create Held Item Class			from Item class
-// TODO: Create Evolution Item Class	from Item class
-// TODO: Create Key Item Class			from Item class
-// TODO: Create Healing Item Class		from Item class
-// TODO: Create Pokeball Class			from Item class
+// TODO: Create Held Item Class	from Item class
+// TODO: Create Evolution Item Class from Item class
+// TODO: Create Key Item Class from Item class
+// TODO: Create Healing Item Class from Item class
 
 // TODO: Create Pokedex Class
 // TODO: Create Classification String for implementation with a Pokedex Class
@@ -49,6 +46,7 @@ namespace pk
 
 		string		m_name;				// Pokemon Name
 		string		m_nickname;			// Nickname given to Pokemon. Default should be m_name
+		string		m_classification;	// The Classification of the Pokemon. IE. Espeon: 'The Sun Pokemon'
 
 		Ability		m_ability1;			// First ability
 		Ability		m_ability2;			// Second ability
@@ -101,6 +99,8 @@ namespace pk
 
 		int			m_type1;			// First type.  Default is NORMAL
 		int			m_type2;			// Second Type. Default is NONE
+
+		signed int	m_happiness;		// Happiness Value from 0 to 255
 
 		// Set's IV's
 		void SetIVs(void);
@@ -167,6 +167,11 @@ namespace pk
 		// Returns Nature
 		Nature GetNature(void){return m_nature;}
 
+		// Returns the first type
+		int GetType1(void){return m_type1;}
+
+		// Returns the second type
+		int GetType2(void){return m_type2;}
 
 
 		// -----------SETTERS-----------
@@ -189,6 +194,9 @@ namespace pk
 
 		// returns the next number in the set
 		static int GetRandom(int nLow, int nHigh){return rand() % nHigh + nLow;}	
+
+		// Check the effectiveness of moveType to targetType and return a modifier.
+		double CheckTypeEffective(int moveType, int targetType);
 
 //		. Pokemon Code
 //			. Stats					----

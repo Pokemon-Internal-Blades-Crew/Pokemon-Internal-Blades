@@ -12,6 +12,7 @@ namespace pk
 	class Move
 	{
 	private:
+		Pokemon		pkmn1;
 		std::string m_name;			// Name of the move
 		int			m_accuracy;		// Base accuracy from 1 to 100. If n/a, set to 1000
 		int			m_speed;		// Speed priority is -8 to 8 inclusive with 8 is fastest
@@ -83,7 +84,10 @@ namespace pk
 
 		// Used to get target
 		Pokemon GetTarget(Pokemon target);
-
+		
+		// Checks the effectiveness of the Move to the target.
+		double CheckEffectiveness(Pokemon target);
+		
 
 	// Pokemon GetTarget(void){return m_target;}
 	//			. Moves
