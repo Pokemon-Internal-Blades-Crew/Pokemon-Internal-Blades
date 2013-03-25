@@ -74,6 +74,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Ability.cpp" />
+    <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="Game Window.cpp" />
     <ClCompile Include="Items\Berry.cpp" />
     <ClCompile Include="Items\EvolutionItem.cpp" />
     <ClCompile Include="Items\HealingItem.cpp" />
@@ -101,6 +103,7 @@
   <ItemGroup>
     <ClInclude Include="Ability.h" />
     <ClInclude Include="Constants.h" />
+    <ClInclude Include="Game Window.h" />
     <ClInclude Include="Items\Berry.h" />
     <ClInclude Include="Items\EvolutionItem.h" />
     <ClInclude Include="Items\HealingItem.h" />
@@ -122,9 +125,16 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Game Window.resx" />
     <EmbeddedResource Include="Testing Window.resx">
       <DependentUpon>Testing Window.h</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="app.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

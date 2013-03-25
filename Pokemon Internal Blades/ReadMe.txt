@@ -37,12 +37,7 @@ AssemblyInfo.cpp
   Nature.h(5):		// TODO: Add Favorite Flavor of Berry and other assorted Nature Related Data
   Pokemon.h(25):	// TODO: Implement Moves
   Pokemon.h(26):	// TODO: Implement Evolution
-  Pokemon.h(29):	// TODO: Create Held Item Class	from Item class
-  Pokemon.h(30):	// TODO: Create Evolution Item Class from Item class
-  Pokemon.h(31):	// TODO: Create Key Item Class from Item class
-  Pokemon.h(32):	// TODO: Create Healing Item Class from Item class
   Pokemon.h(35):	// TODO: Create Pokedex Class
-  Pokemon.h(36):	// TODO: Create Classification String for implementation with a Pokedex Class
   Pokemon.h(38):	// TODO: Create a Trainer Class
   Pokemon.h(40):	// TODO: Create a Battle Class
   Pokemon.h(42):	// TODO: Create a Box System Class
