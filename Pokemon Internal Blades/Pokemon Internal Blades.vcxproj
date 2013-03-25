@@ -84,6 +84,9 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Constants.h" />
+    <ClInclude Include="Game Window.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Move.h" />
     <ClInclude Include="Nature.h" />
     <ClInclude Include="Pokemon Internal Blades.h" />
@@ -95,6 +98,7 @@
   <ItemGroup>
     <ClCompile Include="Ability.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="Game Window.cpp" />
     <ClCompile Include="Move.cpp" />
     <ClCompile Include="Nature.cpp" />
     <ClCompile Include="Pokemon Internal Blades.cpp" />
