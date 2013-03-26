@@ -596,16 +596,6 @@ double Pokemon::CheckTypeEffective(int moveType, int targetType)
 	return effectiveness;
 }
 
-bool Pokemon::CheckStab(Move move)
-{
-	bool isTrue;
-	if(move.GetTyping() == GetType1() || move.GetTyping() == GetType2())
-		isTrue = true;
-	else
-		isTrue = false;
-	return isTrue;
-}
-
 
 Move::Move(void)
 {

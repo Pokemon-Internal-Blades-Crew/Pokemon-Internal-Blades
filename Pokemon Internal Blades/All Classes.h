@@ -218,8 +218,8 @@ namespace pk
 		// Check the effectiveness of moveType to targetType and return a modifier.
 		double CheckTypeEffective(int moveType, int targetType);
 
-		// Checks to see if the move gets STAB
-		bool CheckStab(Move move);
+
+		
 	};
 
 	class Move

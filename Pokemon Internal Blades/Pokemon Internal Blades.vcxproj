@@ -76,6 +76,7 @@
     <ClCompile Include="Ability.cpp" />
     <ClCompile Include="All Classes.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="Battle.cpp" />
     <ClCompile Include="Game Window.cpp" />
     <ClCompile Include="Items\Berry.cpp" />
     <ClCompile Include="Items\EvolutionItem.cpp" />
@@ -90,6 +91,7 @@
     <ClCompile Include="Stdafx.cpp" />
     <ClCompile Include="Story_Events.cpp" />
     <ClCompile Include="Testing Window.cpp" />
+    <ClCompile Include="Trainer.cpp" />
     <ClCompile Include="WinCLI.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -102,6 +104,7 @@
   <ItemGroup>
     <ClInclude Include="Ability.h" />
     <ClInclude Include="All Classes.h" />
+    <ClInclude Include="Battle.h" />
     <ClInclude Include="Constants.h" />
     <ClInclude Include="Game Window.h" />
     <ClInclude Include="Items\Berry.h" />
@@ -121,6 +124,7 @@
     <ClInclude Include="Testing Window.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Trainer.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Game Window.resx" />
