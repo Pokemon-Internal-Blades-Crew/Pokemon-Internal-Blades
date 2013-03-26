@@ -9,10 +9,11 @@ namespace pk
 	class Trainer
 	{
 	private:
-		string m_name;
-		int m_gender;
-		int m_cash;
-		Pokemon m_party [6];
+		string m_name;			// Name of the trainer
+		int m_gender;			// Gender of the trainer
+		long m_cash;			// Cash amount of the trainer
+		Pokemon m_party [6];	// Pokemon in Party
+		long m_trainerID;		// ID of the trainer. Should be 6 characters.
 		
 	public:
 		// Default Constructor. Sets m_cash to 3000 and m_gender to MALE
@@ -20,7 +21,7 @@ namespace pk
 		~Trainer(void);
 
 		// Standard Convention. Creates a trainer with no pokemon.
-		Trainer(string name, int cash, int gender); 
+		Trainer(string name, long cash, int gender, long trainerID); 
 
 		// Returns the Pokemon in index 0 of the array m_party
 		Pokemon GetLeadPokemon(void){return m_party[0];}
@@ -41,6 +42,6 @@ namespace pk
 		Pokemon GetSixthPokemon(void){return m_party[5];}
 
 		// Returns the amount of cash the trainer has.
-		int GetCash(void){return m_cash;}
+		long GetCash(void){return m_cash;}
 	};
 }
