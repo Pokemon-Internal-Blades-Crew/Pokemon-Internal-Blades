@@ -21,17 +21,11 @@
 using namespace std;
 using namespace pk;
 
-//using namespace System;
 
 // TODO: Implement Moves
 // TODO: Implement Evolution
 
 // TODO: Create Pokedex Class
-// TODO: Create Classification String for implementation with a Pokedex Class
-
-// TODO: Create a Trainer Class
-
-// TODO: Create a Battle Class
 
 // TODO: Create a Box System Class
 
@@ -41,9 +35,9 @@ namespace pk
 	{
 	private:
 
-		//Move		m_moveCanKnowList;
-		//Move		m_moveKnowsList;
-		//Move		m_eggMoves;
+		//Move_class		m_moveCanKnowList;
+		//Move_class		m_moveKnowsList;
+		//Move_class		m_eggMoves;
 
 		string		m_name;				// Pokemon Name
 		string		m_nickname;			// Nickname given to Pokemon. Default should be m_name
@@ -93,7 +87,6 @@ namespace pk
 		double		m_damage;			// Damage value
 		double		m_stab;				// Same Type Attack Bonus
 		double		m_effectiveness;	// Effectiveness against target.
-		long		m_trainerID;		// Trainer ID: 6 digits
 
 		bool		m_owned;			// Tells if owned. Default to wild: false
 		bool		m_isFainted;		// Tells if the Pokemon is fainted. Default is false.
@@ -222,24 +215,23 @@ namespace pk
 		
 	};
 
-	class Move
+	class Move_class
 	{
 	private:
 		
-		string m_name;			// Name of the move
+		string		m_name;			// Name of the move
 		int			m_accuracy;		// Base accuracy from 1 to 100. If n/a, set to 1000
 		int			m_speed;		// Speed priority is -8 to 8 inclusive with 8 is fastest
-		int			m_power;		// Move's base power.
+		int			m_power;		// Move_class's base power.
 		int			m_mp;			// How many times move can be used.
-		pk::Pokemon		m_target;		// Target of the Move
-		int			m_moveType;		// Type of the Move;
+		int			m_moveType;		// Type of the Move
 
 		// setters
 
 		// Sets the move Accuracy
 		void SetAccuracy(int acc){m_accuracy = acc;}	
 
-		// Sets the Move's speed Priority
+		// Sets the Move_class's speed Priority
 		void SetSpeed(int speed){m_speed = speed;}		
 
 		// Sets the move's base power.
@@ -251,10 +243,10 @@ namespace pk
 	
 	public:
 		// Default Constructor
-		Move(void);
+		Move_class(void);
 
 		// Used for instantiating new moves
-		Move(string name, int acc, int speed, int power, int mp, const int moveType)
+		Move_class(string name, int acc, int speed, int power, int mp, const int moveType)
 			: m_name(name), m_accuracy(acc), m_speed(speed), m_power(power), m_mp(mp), m_moveType(moveType)
 		{
 		};
@@ -276,12 +268,6 @@ namespace pk
 		// Returns the move's base MP
 		int GetMP(void){return m_mp;};			
 
-		// Returns the target of the move
-		Pokemon GetTarget(){return m_target;};	
-
-		// Sets the target of the move
-		void SetTarget(pk::Pokemon target){m_target = target;}			
-
 		// Calls the Setters in one method
 		void SetMoveStats(int acc, int speed, int power, int mp)	
 		{
@@ -295,18 +281,16 @@ namespace pk
 		// Used for STAB
 		int GetTyping();
 
-		// Used to get target
-		Pokemon GetTarget(Pokemon target);
 		
-		// Checks the effectiveness of the Move to the target.
-		double CheckEffectiveness(Pokemon user);
+		// Checks the effectiveness of the Move_class to the target.
+		double CheckEffectiveness(Pokemon user, Pokemon target);
 		
 
 	// Pokemon GetTarget(void){return m_target;}
 	//			. Moves
 	//				. Target ----
 	//				. Typing
-	//				. Is Physical/Is Special/Is Stat Move
+	//				. Is Physical/Is Special/Is Stat Move_class
 	//				. Damage Dealing
 	//				. Accuracy -----
 

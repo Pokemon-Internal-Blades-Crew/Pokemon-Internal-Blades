@@ -596,6 +596,9 @@ double Pokemon::CheckTypeEffective(int moveType, int targetType)
 	
 	return effectiveness;
 }
+
+
+
 /*
 bool Pokemon::CheckStab(pk::Move move)
 {

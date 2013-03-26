@@ -597,27 +597,22 @@ double Pokemon::CheckTypeEffective(int moveType, int targetType)
 }
 
 
-Move::Move(void)
+Move_class::Move_class(void)
 {
 	m_name = EMPTY;			// Empty Name
-	m_moveType = NORMAL;	// Normal Move: Default
+	m_moveType = NORMAL;	// Normal Move_class: Default
 	m_accuracy = 1000;		// High accuracy
 	m_speed = 0;			// Normal Speed Priority
 	m_power = 0;			// Zero Power
 	m_mp = HIGH_MP;			// 30 MP
 }
 
-Pokemon Move::GetTarget(Pokemon target)
-{
-	return target;
-} 
-
-int Move::GetTyping()
+int Move_class::GetTyping()
 {
 	return m_moveType;
 }
 
-double Move::CheckEffectiveness(Pokemon user)
+double Move_class::CheckEffectiveness(Pokemon user, Pokemon target)
 {
 	double effectiveness = 1.0;
 
@@ -625,10 +620,10 @@ double Move::CheckEffectiveness(Pokemon user)
 	int selfType = m_moveType;
 	
 	// sets placeholder int to the target's first type
-	int targetType1 = m_target.GetType1();
+	int targetType1 = target.GetType1();
 
 	// sets placeholder int to the target's second type
-	int targetType2 = m_target.GetType2();
+	int targetType2 = target.GetType2();
 	
 	// First run of the CheckTypeEffective
 	effectiveness *= user.CheckTypeEffective(selfType, targetType1);

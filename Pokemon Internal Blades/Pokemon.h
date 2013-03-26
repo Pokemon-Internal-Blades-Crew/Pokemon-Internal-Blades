@@ -41,9 +41,9 @@ namespace pk
 	{
 	private:
 
-		//Move		m_moveCanKnowList;
-		//Move		m_moveKnowsList;
-		//Move		m_eggMoves;
+		Move		m_moveCanKnowList;
+		Move		m_moveKnowsList;
+		Move		m_eggMoves;
 
 		string		m_name;				// Pokemon Name
 		string		m_nickname;			// Nickname given to Pokemon. Default should be m_name

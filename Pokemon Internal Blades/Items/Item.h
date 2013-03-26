@@ -1,5 +1,5 @@
 #pragma once
-#include "../Pokemon.h"
+#include "../All Classes.h"
 #include "../Constants.h"
 namespace pk
 {

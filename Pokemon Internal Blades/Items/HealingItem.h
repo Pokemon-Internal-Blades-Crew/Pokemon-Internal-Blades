@@ -1,6 +1,6 @@
 #pragma once
 #include "item.h"
-#include "../Pokemon.h"
+#include "../All Classes.h"
 #include "../Constants.h"
 
 // TODO: Write everything Pertaining to Healing Items.

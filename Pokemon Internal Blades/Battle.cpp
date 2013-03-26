@@ -11,7 +11,7 @@ Battle::~Battle(void)
 {
 }
 
-bool Battle::CheckStab(Move move, Pokemon target)
+bool Battle::CheckStab(Move_class move, Pokemon target)
 {
 	bool isTrue;
 	if(move.GetTyping() == target.GetType1() || move.GetTyping() == target.GetType2())

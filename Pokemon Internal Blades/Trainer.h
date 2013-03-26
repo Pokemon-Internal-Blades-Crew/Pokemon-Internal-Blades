@@ -1,6 +1,6 @@
 #pragma once
 #include "Stdafx.h"
-#include "Pokemon.h"
+#include "All Classes.h"
 
 
 // TODO: Write all implementation

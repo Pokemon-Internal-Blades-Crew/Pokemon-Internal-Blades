@@ -1,7 +1,6 @@
 #pragma once
-#include "Pokemon.h"
+#include "All Classes.h"
 #include "Constants.h"
-#include "Move.h"
 
 namespace PokemonInternalBlades {
 
@@ -23,18 +22,18 @@ namespace PokemonInternalBlades {
 			InitializeComponent();
 			Pokemon pikachu = Pokemon("Pikachu", "The Electric Mouse Pokemon", ELECTRIC, NONE, NO);
 			pikachu.SetBaseStats(35, 55, 50, 30, 40, 90);
-			pk::Move thunder = pk::Move("Thunder", 90, 0, 120, 5, ELECTRIC);
+			pk::Move_class thunder = pk::Move_class("Thunder", 90, 0, 120, 5, ELECTRIC);
 			Pokemon espeon = Pokemon("Espeon", "The Sun Pokemon", PSYCHIC, NONE, NO);
 			espeon.SetBaseStats(65, 65, 130, 60, 95, 110);
-			pk::Move psychic = pk::Move("Psychic", 100, 1, 120, 15, PSYCHIC);
+			pk::Move_class psychic = pk::Move_class("Psychic", 100, 1, 120, 15, PSYCHIC);
 			
-			double damage = thunder.CheckEffectiveness(espeon);
+			double damage = thunder.CheckEffectiveness(espeon, pikachu);
 			richTextBox1->AppendText("Pikachu");
 			richTextBox1->AppendText(" used ");
 			richTextBox1->AppendText("Thunder");
 			richTextBox1->AppendText(" for ");
 			richTextBox1->AppendText(damage.ToString() + "\n");
-			damage = psychic.CheckEffectiveness(pikachu);
+			damage = psychic.CheckEffectiveness(pikachu, espeon);
 			richTextBox1->AppendText("Espeon");
 			richTextBox1->AppendText(" used ");
 			richTextBox1->AppendText("Psychic");
