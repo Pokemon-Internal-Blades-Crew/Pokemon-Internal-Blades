@@ -27,13 +27,13 @@ namespace PokemonInternalBlades {
 			espeon.SetBaseStats(65, 65, 130, 60, 95, 110);
 			pk::Move_class psychic = pk::Move_class("Psychic", 100, 1, 120, 15, PSYCHIC);
 			
-			double damage = thunder.CheckEffectiveness(espeon, pikachu);
-			richTextBox1->AppendText("Pikachu");
+			double damage = psychic.CheckEffectiveness(pikachu, espeon);
+			richTextBox1->AppendText("Pikachu"/*pikachu.GetName()*/);
 			richTextBox1->AppendText(" used ");
 			richTextBox1->AppendText("Thunder");
 			richTextBox1->AppendText(" for ");
 			richTextBox1->AppendText(damage.ToString() + "\n");
-			damage = psychic.CheckEffectiveness(pikachu, espeon);
+			damage = thunder.CheckEffectiveness(espeon, pikachu);
 			richTextBox1->AppendText("Espeon");
 			richTextBox1->AppendText(" used ");
 			richTextBox1->AppendText("Psychic");
